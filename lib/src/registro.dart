@@ -42,14 +42,14 @@ class _RegistroPageState extends State<RegistroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color.fromARGB(255, 206, 222, 248),
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: const Color(0xFF002C72),
         title: const Text(
           "Registro de Usuario",
           style: TextStyle(
             fontFamily: "BBH_Sans_Bogle",
-            color: Colors.black,
+            color: Color.fromARGB(255, 255, 255, 255),
             fontSize: 24,
           ),
         ),
@@ -66,7 +66,7 @@ class _RegistroPageState extends State<RegistroPage> {
               style: TextStyle(
                 fontFamily: "BBH_Sans_Bogle",
                 fontSize: 22,
-                color: Colors.green,
+                color: Color(0xFF03A9F4),
               ),
             ),
             const SizedBox(height: 20),
@@ -107,7 +107,7 @@ class _RegistroPageState extends State<RegistroPage> {
               style: TextStyle(
                 fontFamily: "BBH_Sans_Bogle",
                 fontSize: 18,
-                color: Colors.green,
+                color: Color(0xFF03A9F4),
               ),
             ),
             const SizedBox(height: 5),
@@ -122,7 +122,7 @@ class _RegistroPageState extends State<RegistroPage> {
                     return Theme(
                       data: Theme.of(context).copyWith(
                         colorScheme: const ColorScheme.light(
-                          primary: Colors.green,
+                          primary: Color(0xFF03A9F4),
                           onPrimary: Colors.black,
                           onSurface: Colors.black,
                         ),
@@ -162,7 +162,7 @@ class _RegistroPageState extends State<RegistroPage> {
               style: TextStyle(
                 fontFamily: "BBH_Sans_Bogle",
                 fontSize: 18,
-                color: Colors.green,
+                color: Color(0xFF03A9F4),
               ),
             ),
             Row(
@@ -173,10 +173,10 @@ class _RegistroPageState extends State<RegistroPage> {
                       "Femenino",
                       style: TextStyle(
                         fontFamily: "BBH_Sans_Bogle",
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
-                    activeColor: Colors.green,
+                    activeColor: const Color.fromARGB(255, 0, 0, 0),
                     value: "Femenino",
                     groupValue: generoSeleccionado,
                     onChanged: (value) {
@@ -192,10 +192,10 @@ class _RegistroPageState extends State<RegistroPage> {
                       "Masculino",
                       style: TextStyle(
                         fontFamily: "BBH_Sans_Bogle",
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
-                    activeColor: Colors.green,
+                    activeColor: const Color.fromARGB(255, 0, 0, 0),
                     value: "Masculino",
                     groupValue: generoSeleccionado,
                     onChanged: (value) {
@@ -214,7 +214,7 @@ class _RegistroPageState extends State<RegistroPage> {
               style: TextStyle(
                 fontFamily: "BBH_Sans_Bogle",
                 fontSize: 18,
-                color: Colors.green,
+                color: Color(0xFF03A9F4),
               ),
             ),
             const SizedBox(height: 8),
@@ -258,15 +258,15 @@ class _RegistroPageState extends State<RegistroPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildBoton("Guardar", Colors.green, Colors.black, () {
+                _buildBoton("Guardar", const Color(0xFF002C72), const Color.fromARGB(255, 255, 255, 255), () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text("Datos guardados correctamente."),
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color(0xFF03A9F4),
                     ),
                   );
                 }),
-                _buildBoton("Salir", Colors.green.shade800, Colors.white, () {
+                _buildBoton("Salir", const Color(0xFF002C72), Colors.white, () {
                   Navigator.pop(context);
                 }),
               ],
@@ -285,7 +285,7 @@ class _RegistroPageState extends State<RegistroPage> {
           label,
           style: const TextStyle(
             fontFamily: "BBH_Sans_Bogle",
-            color: Colors.green,
+            color: Color(0xFF03A9F4),
             fontSize: 16,
           ),
         ),

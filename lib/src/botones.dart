@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+//import 'dart:math';
 
 class BotonesPage extends StatefulWidget {
   const BotonesPage({super.key});
@@ -16,7 +16,7 @@ class _BotonesPageState extends State<BotonesPage>
   late Animation<double> _waveAmplitude;
 
 
-  final Color _green = const Color.fromARGB(255, 0, 150, 0);
+  final Color _green = const Color.fromARGB(255, 0, 0, 0);
 
   late final List<Widget> _screens;
 
@@ -29,7 +29,7 @@ class _BotonesPageState extends State<BotonesPage>
               fontFamily: "BBH_Sans_Bogle",
               fontSize: 28,
               fontWeight: FontWeight.bold,
-              color: _green),
+              color: Colors.lightBlue),
         ),
       ),
       Center(
@@ -39,7 +39,7 @@ class _BotonesPageState extends State<BotonesPage>
               fontFamily: "BBH_Sans_Bogle",
               fontSize: 28,
               fontWeight: FontWeight.bold,
-              color: _green),
+              color: Colors.lightBlue),
         ),
       ),
       Center(
@@ -49,16 +49,16 @@ class _BotonesPageState extends State<BotonesPage>
               fontFamily: "BBH_Sans_Bogle",
               fontSize: 28,
               fontWeight: FontWeight.bold,
-              color: _green),
+              color: Colors.lightBlue),
         ),
       ),
     ];
   }
 
   final List<Color> _backgroundColors = [
-    Colors.black,
-    Colors.black,
-    Colors.black,
+    const Color(0xFF002C72),
+    const Color(0xFF002C72),
+    const Color(0xFF002C72),
   ];
 
   @override
@@ -120,8 +120,8 @@ class _BotonesPageState extends State<BotonesPage>
                             Icons.home,
                             size: 36,
                             color: _currentIndex == 0
-                                ? Colors.black
-                                : Colors.white70,
+                                ? const Color(0xFF03A9F4)
+                                : const Color.fromARGB(179, 255, 255, 255),
                           ),
                           onPressed: () => _onButtonPressed(0),
                         ),
@@ -130,8 +130,8 @@ class _BotonesPageState extends State<BotonesPage>
                             Icons.favorite,
                             size: 36,
                             color: _currentIndex == 1
-                                ? Colors.black
-                                : Colors.white70,
+                                ? const Color(0xFF03A9F4)
+                                : const Color.fromARGB(179, 255, 255, 255),
                           ),
                           onPressed: () => _onButtonPressed(1),
                         ),
@@ -140,8 +140,8 @@ class _BotonesPageState extends State<BotonesPage>
                             Icons.search,
                             size: 36,
                             color: _currentIndex == 2
-                                ? Colors.black
-                                : Colors.white70,
+                                ? const Color(0xFF03A9F4)
+                                : const Color.fromARGB(179, 255, 255, 255),
                           ),
                           onPressed: () => _onButtonPressed(2),
                         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'botones.dart';
-import 'registro.dart'; // 👈 Importamos la nueva pantalla de registro
+import 'registro.dart';
+import 'calculadora.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFFFFFFFF),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20.0),
@@ -40,26 +41,26 @@ class _HomepageState extends State<Homepage> {
             children: [
               const CircleAvatar(
                 radius: 100.0,
-                backgroundColor: Colors.green,
+                backgroundColor: Color.fromARGB(255, 0, 29, 103),
                 backgroundImage: AssetImage(
-                  "/src/flutter/examples/cuarto/ejemploa/images/Logo_Negro.jpg.jpeg",
+                  "/Users/kevni/Desktop/Movil/flutterKN/images/Logo.jpg",
                 ),
               ),
               const SizedBox(height: 20.0),
               const Text(
-                "Backfire",
+                "CyberShieldTech",
                 style: TextStyle(
                   fontFamily: "BBH_Sans_Bogle",
                   fontSize: 50.0,
-                  color: Colors.green,
+                  color: Color(0xFF002C72),
                 ),
               ),
               const Text(
                 "Login",
                 style: TextStyle(
-                  fontFamily: "BBH_Sans_Bartle",
+                  fontFamily: "FjallaOne",
                   fontSize: 30.0,
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
               const SizedBox(height: 30.0),
@@ -75,7 +76,7 @@ class _HomepageState extends State<Homepage> {
                       style: TextStyle(
                         fontFamily: "BBH_Sans_Bogle",
                         fontSize: 16,
-                        color: Colors.green,
+                        color: Color(0xFF002C72),
                       ),
                     ),
                     const SizedBox(height: 5),
@@ -114,7 +115,7 @@ class _HomepageState extends State<Homepage> {
                       style: TextStyle(
                         fontFamily: "BBH_Sans_Bogle",
                         fontSize: 16,
-                        color: Colors.green,
+                        color: Color(0xFF002C72),
                       ),
                     ),
                     const SizedBox(height: 5),
@@ -151,7 +152,7 @@ class _HomepageState extends State<Homepage> {
                     Expanded(
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
+                          backgroundColor: const Color(0xFF002C72),
                           padding: const EdgeInsets.symmetric(vertical: 15.0),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -169,7 +170,7 @@ class _HomepageState extends State<Homepage> {
                           "Ingresar",
                           style: TextStyle(
                             fontSize: 18.0,
-                            color: Colors.black,
+                            color: Colors.white,
                             fontFamily: "BBH_Sans_Bogle",
                           ),
                         ),
@@ -179,7 +180,7 @@ class _HomepageState extends State<Homepage> {
                     Expanded(
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                          side: const BorderSide(color: Colors.green, width: 2),
+                          side: const BorderSide(color: Color(0xFF002C72), width: 2),
                           padding: const EdgeInsets.symmetric(vertical: 15.0),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -197,7 +198,7 @@ class _HomepageState extends State<Homepage> {
                           "Registrarse",
                           style: TextStyle(
                             fontSize: 18.0,
-                            color: Colors.green,
+                            color: Color(0xFF002C72),
                             fontFamily: "BBH_Sans_Bogle",
                           ),
                         ),
@@ -208,12 +209,45 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(height: 25.0),
 
+              // 🔢 Botón Calculadora
+              SizedBox(
+                width: 400,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.pinkAccent,
+                    padding: const EdgeInsets.symmetric(vertical: 15.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                  icon: const Icon(Icons.calculate, color: Colors.white),
+                  label: const Text(
+                    "Calculadora",
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.white,
+                      fontFamily: "BBH_Sans_Bogle",
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CalculadoraPage(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+
+              const SizedBox(height: 25.0),
+
               // Botón salir
               SizedBox(
                 width: 200,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green.shade800,
+                    backgroundColor: const Color(0xFF002C72),
                     padding: const EdgeInsets.symmetric(vertical: 15.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
